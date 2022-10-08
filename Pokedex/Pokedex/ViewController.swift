@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  Pokedex
-//
-//  Created by Maury on 8/10/22.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
