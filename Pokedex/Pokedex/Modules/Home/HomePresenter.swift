@@ -7,11 +7,14 @@ protocol HomePresenterProtocol {
     var delegate: HomePresenterDelegate? { get set }
     
     func show() -> HomeViewController
+    func fetchPokemon(offset: Int?)
 }
 
 //MARK: - Delegate
 protocol HomePresenterDelegate: AnyObject {
-    
+    func showLoading()
+    func hideLoading()
+    func reloadData()
 }
 
 //MARK: Presenter
@@ -42,6 +45,29 @@ extension HomePresenter: HomePresenterProtocol {
         router.show(presenter: self)
     }
     
+    func fetchPokemon(offset: Int?) {
+        
+        delegate?.showLoading()
+        
+        if offset == 0 {
+            
+            interactor.fetchPokemon(offset: offset) { [weak self] pokemones in
+
+                self?.delegate?.hideLoading()
+                let pokemonesModel = pokemones.map({ PokemonModel($0)})
+                self?.dataSource.reloadPokemones(pokemonesModel)
+                self?.delegate?.reloadData()
+            }
+        } else {
+        
+            interactor.fetchPokemon(offset: offset) { [weak self] pokemones in
+                self?.delegate?.hideLoading()
+                let pokemonesModel = pokemones.map({ PokemonModel($0)})
+                self?.dataSource.appendPokemones(pokemonesModel)
+                self?.delegate?.reloadData()
+            }
+        }
+    }
 }
 
 //MARK: - Private
