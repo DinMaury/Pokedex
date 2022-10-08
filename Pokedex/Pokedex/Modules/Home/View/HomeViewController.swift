@@ -2,6 +2,9 @@ import UIKit
 
 final class HomeViewController: UIViewController {
 
+    //MARK: - View
+    @IBOutlet weak var colletionView: UICollectionView!
+    
     private var loadingView: LoadingView?
     
     //MARK: - Properties
@@ -26,6 +29,14 @@ final class HomeViewController: UIViewController {
         
         presenter.delegate = self
         presenter.fetchPokemon(offset: nil)
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumInteritemSpacing = 0
+        colletionView.collectionViewLayout = layout
+        colletionView.register(.init(nibName: PokemonCell.identifier, bundle: nil), forCellWithReuseIdentifier: PokemonCell.identifier)
+        
+        colletionView.dataSource = presenter.dataSource
+        colletionView.delegate = presenter.dataSource
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,5 +68,21 @@ extension HomeViewController: HomePresenterDelegate {
     
     func reloadData() {
         
+        DispatchQueue.main.async {
+            
+            self.colletionView.reloadData()
+        }
+    }
+    
+    func reloadDataColletionView(indexPath: IndexPath) {
+        
+        DispatchQueue.main.async { 
+            
+            self.colletionView.reloadItems(at: [indexPath])
+        }
+    }
+    
+    func showError(title: String, message: String) {
+        print(message)
     }
 }
