@@ -22,6 +22,9 @@
 		3645EC9328F1C12F00D51520 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3645EC9228F1C12F00D51520 /* HomeRouter.swift */; };
 		3645EC9628F1C16400D51520 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3645EC9428F1C16400D51520 /* HomeViewController.swift */; };
 		3645EC9728F1C16400D51520 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3645EC9528F1C16400D51520 /* HomeViewController.xib */; };
+		3645EC9C28F1CA8900D51520 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3645EC9B28F1CA8900D51520 /* UIView+Extension.swift */; };
+		3645EC9F28F1CB6000D51520 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3645EC9E28F1CB6000D51520 /* LoadingView.swift */; };
+		3645ECA528F1CD3D00D51520 /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3645ECA428F1CD3D00D51520 /* LoadingView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		3645EC9228F1C12F00D51520 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		3645EC9428F1C16400D51520 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3645EC9528F1C16400D51520 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		3645EC9B28F1CA8900D51520 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		3645EC9E28F1CB6000D51520 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		3645ECA428F1CD3D00D51520 /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		402699DA354F350FAFD4CD01 /* Pods-Pokedex.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.release.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.release.xcconfig"; sourceTree = "<group>"; };
 		CE32E36FF731904FC142270A /* Pods-Pokedex.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pokedex.debug.xcconfig"; path = "Target Support Files/Pods-Pokedex/Pods-Pokedex.debug.xcconfig"; sourceTree = "<group>"; };
 		F18C53BEB8AB2099EBFAA0F1 /* Pods_Pokedex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pokedex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +154,8 @@
 		3645EC8328F1BDEE00D51520 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				3645EC9A28F1CA7B00D51520 /* Extensions */,
+				3645EC9D28F1CAB900D51520 /* View */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -155,6 +163,8 @@
 		3645EC8428F1BE0000D51520 /* Conectivity */ = {
 			isa = PBXGroup;
 			children = (
+				3645EC9828F1C9C500D51520 /* Entities */,
+				3645EC9928F1C9CF00D51520 /* Manager */,
 			);
 			path = Conectivity;
 			sourceTree = "<group>";
@@ -203,6 +213,37 @@
 			children = (
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		3645EC9828F1C9C500D51520 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3645EC9928F1C9CF00D51520 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		3645EC9A28F1CA7B00D51520 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3645EC9B28F1CA8900D51520 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3645EC9D28F1CAB900D51520 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3645EC9E28F1CB6000D51520 /* LoadingView.swift */,
+				3645ECA428F1CD3D00D51520 /* LoadingView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		7617A67B7BE3B83E3A6278F3 /* Pods */ = {
@@ -329,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3645EC6028F1B9EE00D51520 /* LaunchScreen.storyboard in Resources */,
+				3645ECA528F1CD3D00D51520 /* LoadingView.xib in Resources */,
 				3645EC5D28F1B9EE00D51520 /* Assets.xcassets in Resources */,
 				3645EC9728F1C16400D51520 /* HomeViewController.xib in Resources */,
 			);
@@ -400,6 +442,8 @@
 				3645EC5428F1B9EC00D51520 /* AppDelegate.swift in Sources */,
 				3645EC8B28F1C10000D51520 /* HomeDataSource.swift in Sources */,
 				3645EC9328F1C12F00D51520 /* HomeRouter.swift in Sources */,
+				3645EC9F28F1CB6000D51520 /* LoadingView.swift in Sources */,
+				3645EC9C28F1CA8900D51520 /* UIView+Extension.swift in Sources */,
 				3645EC9628F1C16400D51520 /* HomeViewController.swift in Sources */,
 				3645EC8F28F1C11800D51520 /* HomeModule.swift in Sources */,
 				3645EC9128F1C12200D51520 /* HomePresenter.swift in Sources */,
