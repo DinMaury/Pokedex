@@ -79,5 +79,11 @@ private extension HomePresenter {
             
             self.fetchPokemon(offset: offset)
         }
+        
+        dataSource.pokemonTappedCompletion = { [unowned self] pokemon in
+            
+            self.router.showDetails(pokemonId: pokemon.id)
+       }
     }
+    
 }

@@ -3,6 +3,7 @@ import UIKit
 protocol HomeRouterProtocol {
     
     func show(presenter: HomePresenterProtocol) -> HomeViewController
+    func showDetails(pokemonId: String)
 }
 
 
@@ -23,5 +24,12 @@ extension HomeRouter: HomeRouterProtocol {
         self.viewController = viewController
         
         return viewController
+    }
+    
+    func showDetails(pokemonId: String) {
+        guard let navigationController = viewController?.navigationController else { return }
+        
+        let module = HomeDetailModule(pokemonId: pokemonId)
+        module.show(in: navigationController)
     }
 }
