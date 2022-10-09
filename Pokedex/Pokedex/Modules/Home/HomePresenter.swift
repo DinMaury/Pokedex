@@ -74,6 +74,10 @@ extension HomePresenter: HomePresenterProtocol {
 private extension HomePresenter {
     
     func setupDataSource() {
+        
+        dataSource.reloadColletionView = { [unowned self] offset in
             
+            self.fetchPokemon(offset: offset)
+        }
     }
 }
