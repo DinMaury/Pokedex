@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokemonDetailsViewController" customModule="Pokedex" customModuleProvider="target">
             <connections>
                 <outlet property="abilityLabel" destination="9gQ-m1-gBZ" id="ekG-9r-NmE"/>
-                <outlet property="colletionView" destination="jfq-Ns-sux" id="gZb-KE-4zG"/>
+                <outlet property="collectionView" destination="jfq-Ns-sux" id="sTG-jM-F6J"/>
                 <outlet property="descriptionLabel" destination="EqC-kj-Zmp" id="yts-xl-v7a"/>
                 <outlet property="namePokemonLabel" destination="aBS-nG-s0A" id="xHi-0R-J5l"/>
                 <outlet property="pokemonImageView" destination="Qx3-M9-WJ0" id="yce-fz-kb8"/>
@@ -60,16 +60,13 @@
                                 </collectionView>
                             </subviews>
                         </stackView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqC-kj-Zmp">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EqC-kj-Zmp">
                             <rect key="frame" x="0.0" y="504.5" width="374" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <constraints>
-                        <constraint firstItem="EqC-kj-Zmp" firstAttribute="width" secondItem="Fmw-vZ-4sY" secondAttribute="width" id="8n4-38-MXv"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

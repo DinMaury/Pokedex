@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Pokedex" customModuleProvider="target">
             <connections>
-                <outlet property="colletionView" destination="wGd-Wm-7MB" id="KQg-L7-5p4"/>
+                <outlet property="collectionView" destination="wGd-Wm-7MB" id="I2j-DE-T1f"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -19,7 +19,7 @@ class PokemonDetailsViewController: UIViewController {
         }
     }
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var colletionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     //MARK: - Properties
     private var presenter: HomeDetailPresenterProtocol
@@ -44,12 +44,12 @@ class PokemonDetailsViewController: UIViewController {
         
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
-        layout.scrollDirection = .vertical
-        colletionView.collectionViewLayout = layout
-        colletionView.register(.init(nibName: PokemonDetailsCell.identifier, bundle: nil), forCellWithReuseIdentifier: PokemonDetailsCell.identifier)
+        layout.scrollDirection = .horizontal
+        collectionView.collectionViewLayout = layout
+        collectionView.register(.init(nibName: PokemonDetailsCell.identifier, bundle: nil), forCellWithReuseIdentifier: PokemonDetailsCell.identifier)
 
-        colletionView.dataSource = presenter.dataSource
-        colletionView.delegate = presenter.dataSource
+        collectionView.dataSource = presenter.dataSource
+        collectionView.delegate = presenter.dataSource
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,7 +71,7 @@ extension PokemonDetailsViewController: HomeDetailDelegate {
             self.pokemonImageView.downloadImage(id: "\(pokemon.id)")
             self.descriptionLabel.downloadDescription(id: "\(pokemon.id)")
             self.namePokemonLabel.text = pokemon.name.capitalized
-            self.colletionView.reloadData()
+            self.collectionView.reloadData()
         }
     }
 }

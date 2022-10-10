@@ -8,6 +8,8 @@ protocol HomePresenterProtocol {
     
     func show() -> HomeViewController
     func fetchPokemon(offset: Int?)
+    func changeRows()
+    func changeRowsFirts()
 }
 
 //MARK: - Delegate
@@ -67,6 +69,14 @@ extension HomePresenter: HomePresenterProtocol {
                 self?.delegate?.reloadData()
             }
         }
+    }
+    
+    func changeRowsFirts() {
+        dataSource.numRows = 2
+    }
+    
+    func changeRows() {
+        dataSource.numRows = dataSource.numRows == 1 ? 2 : 1
     }
 }
 

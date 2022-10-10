@@ -3,6 +3,7 @@ import UIKit
 
 final class HomeDataSource: NSObject {
     
+    var numRows: Int = 2
     var pokemonTappedCompletion: ((PokemonModel) -> Void)?
     var reloadColletionView: ((Int) -> Void)?
     
@@ -39,7 +40,7 @@ extension HomeDataSource: UICollectionViewDataSource {
 extension HomeDataSource: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        .init(width: collectionView.bounds.width/2, height: collectionView.bounds.width/2)
+        .init(width: collectionView.bounds.width/CGFloat(numRows), height: collectionView.bounds.width/2)
     }
     
 }
