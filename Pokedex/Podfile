@@ -6,8 +6,7 @@ target 'Pokedex' do
   use_frameworks!
 
   # Pods for Pokedex
-pod 'Alamofire',
- 
-	:git => 'https://github.com/Alamofire/Alamofire.git'
+pod 'Alamofire'
+pod 'AlamofireImage'
 
 end

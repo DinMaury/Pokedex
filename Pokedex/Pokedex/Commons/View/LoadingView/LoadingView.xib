@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingView" customModule="Pokedex" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="Gay-02-6Ja" id="QFH-Xa-p8v"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ht1-mP-mJv">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Gay-02-6Ja">
+                            <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                        </activityIndicatorView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.45000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Gay-02-6Ja" firstAttribute="centerX" secondItem="Ht1-mP-mJv" secondAttribute="centerX" id="ImB-hc-hRs"/>
+                        <constraint firstItem="Gay-02-6Ja" firstAttribute="centerY" secondItem="Ht1-mP-mJv" secondAttribute="centerY" id="yeV-CA-Iqv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Ht1-mP-mJv" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="74r-KQ-O2V"/>
+                <constraint firstItem="Ht1-mP-mJv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Cm3-3f-5Ro"/>
+                <constraint firstAttribute="trailing" secondItem="Ht1-mP-mJv" secondAttribute="trailing" id="Lft-Sc-o1U"/>
+                <constraint firstAttribute="bottom" secondItem="Ht1-mP-mJv" secondAttribute="bottom" id="dMY-Du-ofV"/>
+            </constraints>
+            <point key="canvasLocation" x="235" y="-237"/>
+        </view>
+    </objects>
+</document>
