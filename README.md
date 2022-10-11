@@ -8,7 +8,7 @@ Arquitectura: VIPER
  
 Instrucciones de ejecución:
  
-1. Clonar el repositorio.
+1. Clonar el repositorio y ubicarse en la rama Develop.
 2. Ingresar en este folder.
 3. ejecutar la instrucción "pod install" en la terminal del folder.
 3.1 Instala cocoapods.
